@@ -1,4 +1,4 @@
-# Knowledge base
+# 🤓 Knowledge base
 
 Helpful snippets of common tasks
 
