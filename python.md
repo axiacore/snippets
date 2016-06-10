@@ -11,6 +11,7 @@ from PIL import Image
 
 from django.core.files.uploadedfile import InMemoryUploadedFile
 
+
 def get_test_image():
     """Returns an image for running tests
     """
