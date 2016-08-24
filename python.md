@@ -33,3 +33,24 @@ def get_test_image():
 
     return image_file
 ```
+
+### Making all model fields readonly in the admin
+
+
+```python
+def get_readonly_fields(self, request, obj=None):
+    if obj is None:
+        return super(
+            ModelName,
+            self
+        ).get_readonly_fields(
+            request,
+            obj,
+        )
+    # Make all fields readonly.
+    read_only_fields = list(set(
+        [field.name for field in self.opts.local_fields] +
+        [field.name for field in self.opts.local_many_to_many]
+    ))
+    return read_only_fields
+```
